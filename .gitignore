@@ -1,0 +1,17 @@
+# Credenciales y configuración local
+*_api_key.txt
+.env
+.env.*
+
+# Datos generados o modelos descargados localmente
+generated_images/
+generated_audio/
+vosk-model-small-es-0.42/
+models/
+
+# Cachés, entornos y copias locales
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+backups/
