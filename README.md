@@ -66,3 +66,7 @@ py -m py_compile app.py
 - Historial de cambios: `CHANGELOG.md`
 
 Los archivos de claves, modelos Vosk, imágenes generadas y audios están excluidos del control de versiones mediante `.gitignore`.
+
+## Local web version
+
+This repository also includes a local FastAPI and Ollama web interface. See [README_WEB.md](README_WEB.md) for setup and startup instructions.

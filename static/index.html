@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11111b">
+  <title>IA Generativa Local</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación">
+      <a class="brand" href="/" aria-label="Inicio JonGoX IA Generativa">
+        <img class="brand-logo" src="/design/logo_IA_GEN.png" alt="JonGoX IA Gen">
+      </a>
+      <button class="new-chat" id="new-chat" type="button"><span>＋</span> Nueva conversación</button>
+      <div class="side-caption">TU ESPACIO LOCAL</div>
+      <div class="privacy-card"><span class="privacy-icon">◉</span><div><strong>IA local</strong><small>Búsqueda web activa por defecto</small></div><span class="status-dot" id="sidebar-dot"></span></div>
+      <div class="sidebar-bottom"><span class="pixel-star">✦</span><span>Una idea a la vez.<br>Grandes cosas empiezan aquí.</span></div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand">JONGOX <span class="brand-accent">IA GEN</span></div>
+        <div class="model-status"><span class="status-dot" id="top-dot"></span><span id="model-label">Revisando modelo local…</span></div>
+        <button class="icon-button" id="clear-chat" type="button" title="Limpiar conversación" aria-label="Limpiar conversación">⌫</button>
+      </header>
+
+      <section class="conversation" id="conversation" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="welcome-hero">
+            <div class="welcome-character">
+              <img class="mascot" id="welcome-mascot" src="/static/mascot-01.webp" alt="JonGoX, asistente creativo">
+            </div>
+            <div class="welcome-content">
+              <img class="welcome-logo" src="/design/logo_IA_GEN.png" alt="JonGoX IA Generativa">
+              <span class="eyebrow">TALLER CREATIVO · IA LOCAL</span>
+              <h1>¿Qué vamos a<br><span>imaginar hoy?</span></h1>
+              <p>Respuestas con fuentes e imágenes relacionadas.<br>Desactiva la búsqueda web para conversar solo con el modelo local.</p>
+              <div class="suggestions">
+                <button type="button" class="suggestion" data-prompt="Dame tres ideas creativas para un proyecto de inteligencia artificial."><span>✧</span> Ideas para un proyecto</button>
+                <button type="button" class="suggestion" data-prompt="Explícame la inteligencia artificial generativa con un ejemplo sencillo."><span>◌</span> Aprender algo nuevo</button>
+                <button type="button" class="suggestion" data-prompt="Ayúdame a escribir una historia corta sobre una antena que conecta mundos."><span>✎</span> Escribir una historia</button>
+                <button type="button" class="suggestion" data-prompt="Genera una imagen de un auto de carreras futurista rojo, en una pista nocturna, estilo cinematográfico."><span>🎨</span> Crear una imagen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <div class="composer-wrap">
+        <form class="composer" id="chat-form">
+          <textarea id="prompt" rows="1" maxlength="8000" placeholder="Escribe tu idea aquí…" aria-label="Escribe un mensaje"></textarea>
+          <div class="composer-footer">
+            <label class="search-option" title="Activa por defecto. La pregunta se envía a DuckDuckGo y Openverse para buscar fuentes e imágenes; los extractos web pasan al modelo local para redactar la respuesta.">
+              <input id="web-search" type="checkbox" checked>
+              <span class="search-icon">⌕</span>
+              <span>Buscar fuentes e imágenes relacionadas</span>
+            </label>
+            <div class="composer-actions">
+              <button class="image-button" id="generate-image" type="button" title="Generación gratuita con Pollinations; el prompt se envía a ese servicio y puede tener límites de uso.">🎨 Crear imagen</button>
+              <button class="send-button" id="send-button" type="submit" aria-label="Enviar mensaje"><span>Enviar</span><b>↑</b></button>
+            </div>
+          </div>
+        </form>
+        <div class="footnote">Incluye fuentes e imágenes relacionadas · Puedes desactivar la búsqueda web · Crear imágenes con Pollinations.</div>
+      </div>
+    </main>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

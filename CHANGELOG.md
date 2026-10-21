@@ -2,6 +2,9 @@
 
 ## 2026-10-20
 
+- Added a local FastAPI/Ollama web interface with a responsive layout, animated mascot, related-image gallery, and image generation flow.
+- Enabled web search by default for cited text answers and related Openverse images; added an opt-out checkbox.
+
 - Se añadieron respuestas automáticas de texto con AI Horde cuando Gemini devuelve error 429 por cuota agotada. La cola se consulta en segundo plano; la respuesta alternativa mantiene el idioma del usuario e indica que no tiene búsqueda web en tiempo real.
 - Se añadió búsqueda fundamentada de Google para las respuestas de Gemini y se muestran las fuentes consultadas.
 - Se amplió la búsqueda automática de imágenes con Openverse y Wikimedia Commons, pasando por varias opciones y continuando si una miniatura no carga.
